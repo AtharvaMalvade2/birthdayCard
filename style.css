@@ -82,7 +82,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;   /* start from top */
     align-items: center;
 }
 .content .left{
@@ -92,15 +92,19 @@ body {
     width: 60%;
 }
 
-.content .left{
+/* .content .left{
     width: 40%;
     /* position: sticky;
     top: 60px;   /* keeps left side nicely placed */
-    /* height: fit-content; */ 
-    .content .left {
+    /* height: fit-content; 
+}*/
+
+.content .left {
+    width: 40%;
     position: relative;   /* normal flow */
 }
-}
+ 
+
 .left .btn{
     transform: scale(0);
     animation: scaleCricle 2s 16s forwards ease-in-out;
