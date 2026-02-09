@@ -40,6 +40,12 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+#wrapper {
+    min-height: 100vh;   /* allow page to grow */
+    overflow-x: hidden;
+    overflow-y: visible; /* normal page scroll */
+}
 .flag__birthday{
     display: flex;
     justify-content: space-between;
@@ -69,7 +75,7 @@ body {
     position: relative;
     display: flex;
     padding-top: 3rem;
-    align-items: flex-start;   /* KEY FIX */
+    /* align-items: flex-start;   KEY FIX */
 }
 
 .content .left, .content .right{
@@ -88,9 +94,12 @@ body {
 
 .content .left{
     width: 40%;
-    position: sticky;
+    /* position: sticky;
     top: 60px;   /* keeps left side nicely placed */
-    height: fit-content;
+    /* height: fit-content; */ 
+    .content .left {
+    position: relative;   /* normal flow */
+}
 }
 .left .btn{
     transform: scale(0);
@@ -1068,7 +1077,7 @@ body {
 }
 
 .birthday-video video {
-    height: 340px;          /* controls vertical size */
+    height: 540px;          /* controls vertical size */
     width: auto;            /* keeps original vertical ratio */
     aspect-ratio: 9 / 16;   /* forces portrait frame */
     object-fit: cover;      /* fills nicely */
